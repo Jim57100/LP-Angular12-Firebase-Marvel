@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="row change mb-3" *ngIf="addAlert">
+    <div class="col-12 alert alert-success">
+      New hero created !
+    </div>
+  </div>
+  <div *ngIf="hero">
+    <div class="row mt-3 mb-3">
+      <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+          <label>Name</label><br>
+          <input type="text" class="form-control" [(ngModel)]="hero.heroName">
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+          <label>Real Name</label><br>
+          <input type="text" class="form-control" [(ngModel)]="hero.realName">
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+          <label>Gender</label><br>
+          <input type="text" class="form-control" [(ngModel)]="hero.gender">
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+          <label>Place of origin</label><br>
+          <input type="text" class="form-control" [(ngModel)]="hero.placeOfOrigin">
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+          <label>Powers</label><br>
+          <input type="text" class="form-control" [(ngModel)]="hero.powers">
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+          <label>Affiliation</label><br>
+          <input type="text" class="form-control" [(ngModel)]="hero.affiliation">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row mb-3">
+      <div class="col-12">
+      <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+          <label>Thumbnail path</label><br>
+          <input type="text" class="form-control" [(ngModel)]="hero.thumbnails">
+          <div id="imgHelp" class="form-text">../../../assets/img/thumbnails/</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row text-center mb-3">
+      <div class="col-12">
+        <div class="submit d-grip gap-2">
+          <button type="button" class="btn btn-outline-success btn-lg" (click)="addHero()">Envoyer</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+

@@ -1,0 +1,24 @@
+<div class="container mt-3">
+  <div class="table-responsive">
+    <table class="table table-hover" *ngIf="heroes">
+      <thead>
+        <tr>
+          <th scope="col">Thumb</th>
+          <th scope="col">Name</th>
+          <th scope="col">RealName</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Powers</th>
+          <th scope="col">Place of origin</th>
+          <th scope="col">Affiliation</th>
+          <th scope="col">Update</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody  *ngFor="let hero of heroes; let i = index" >
+        <app-hero [id]="hero.id" [heroName]="hero.heroName"
+          [realName]="hero.realName" [gender]="hero.gender" [powers]="hero.powers" [placeOfOrigin]="hero.placeOfOrigin"
+          [affiliation]="hero.affiliation" [thumbnails]="hero.thumbnails"></app-hero>
+      </tbody>
+    </table>
+  </div>
+</div>

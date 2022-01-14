@@ -1,0 +1,13 @@
+
+  <tr>
+    <th scope="row"><img [src]="thumbnails"></th>
+    <td>{{  heroName  }}</td>
+    <td>{{  realName }}</td>
+    <td>{{  gender }}</td>
+    <td>{{  powers }}</td>
+    <td>{{  placeOfOrigin  }}</td>
+    <td>{{  affiliation  }}</td>
+    <td><span routerLink="/modif/{{id}}" class="btn btn-primary">Edit</span></td>
+    <td><span (click)="removeHero()" class="btn btn-danger">Delete</span></td>
+  </tr>
+
